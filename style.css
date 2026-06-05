@@ -658,6 +658,9 @@ section{
     .timeline-dot{
         left: 0;
     }
+    .timeline-date-left{
+        text-align: left;
+    }
 }
 
 

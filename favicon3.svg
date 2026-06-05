@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <circle cx="32" cy="32" r="30" fill="white"/>
+
+  <!-- Border -->
+  <circle
+    cx="32"
+    cy="32"
+    r="26"
+    fill="none"
+    stroke="#91b3ff"
+    stroke-width="4"/>
+
+  <!-- First C -->
+  <text
+    x="25"
+    y="35"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Arial, sans-serif"
+    font-size="34"
+    font-weight="900"
+    fill="black">
+    C
+  </text>
+
+  <!-- Second C -->
+  <text
+    x="39"
+    y="35"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Arial, sans-serif"
+    font-size="34"
+    font-weight="900"
+    fill="#91b3ff">
+    C
+  </text>
+</svg>
