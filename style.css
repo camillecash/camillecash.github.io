@@ -353,6 +353,13 @@ section{
     color: black;
     margin: 6px 0 15px;
 }
+.timeline-date-left{
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+    margin: 6px 0 15px;
+    text-align: right;
+}
 .timeline-content{
     background-color: var(--main-color);
     backdrop-filter: blur(20px);
@@ -590,11 +597,13 @@ section{
         width: 45vw;
         height: 45vw;
         top: 50rem;
+        background-color: black;
     }
     .home-circle-2{
         width: 55vw;
         height: 55vw;
         top: 10rem;
+        background-color: var(--main-color);
     }
     .home-img{
         display: grid;

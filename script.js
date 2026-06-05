@@ -6,6 +6,7 @@ let navLinks = document.querySelectorAll('header nav a');
 
 window.addEventListener('scroll', () => {
     let top = window.scrollY;
+    let currentId = null;
 
     sections.forEach(sec => {
         let offset = sec.offsetTop - 150;
@@ -13,20 +14,24 @@ window.addEventListener('scroll', () => {
         let id = sec.getAttribute('id');
 
         if (top >= offset && top < offset + height) {
-
-            navLinks.forEach(link => {
-                link.onclick = () => {
-                    menuIcon.classList.remove('bx-x');
-                    navbar.classList.remove('active');
-                };
-            });
-
-            let activeLink = document.querySelector(`header nav a[href*="${id}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
+            currentId = id;
         }
     });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+
+        if (currentId && link.getAttribute('href') === `#${currentId}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+navLinks.forEach(link => {
+    link.onclick = () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    };
 });
 
 if (menuIcon && navbar) {
