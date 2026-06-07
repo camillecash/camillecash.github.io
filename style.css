@@ -783,7 +783,16 @@ section{
     }
     .service-container .services-box{
         height: auto;
-        min-height: 350px;
+        padding: 2rem 1.5rem;
+    }
+    .services > p{
+        font-size: 1.8rem;
+    }
+    .services-box h3{
+        font-size: 2.4rem;
+    }
+    .service-options{
+        font-size: 1.6rem;
     }
     .timeline-items::before{
         left: 7px;
@@ -804,6 +813,18 @@ section{
     }
     .contact > p{
         font-size: 2rem;
+    }
+}
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover {
+        background: white;
+        color: var(--main-color);
+        transform: none;
+    }
+
+    .btn-secondary:hover {
+        background: var(--main-color);
+        color: white;
     }
 }
 
