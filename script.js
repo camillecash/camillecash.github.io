@@ -5,11 +5,11 @@ let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
 window.addEventListener('scroll', () => {
-    let top = window.scrollY;
+    let top = window.scrollY + 200;
     let currentId = null;
 
     sections.forEach(sec => {
-        let offset = sec.offsetTop - 150;
+        let offset = sec.offsetTop;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
@@ -28,15 +28,17 @@ window.addEventListener('scroll', () => {
 });
 
 navLinks.forEach(link => {
-    link.onclick = () => {
+    link.addEventListener('click', () => {
         menuIcon.classList.remove('bx-x');
         navbar.classList.remove('active');
-    };
+    });
 });
 
 if (menuIcon && navbar) {
-    menuIcon.onclick = () => {
+    menuIcon.addEventListener('click', () => {
         menuIcon.classList.toggle('bx-x');
         navbar.classList.toggle('active');
-    };
+    });
 }
+
+window.dispatchEvent(new Event('scroll'));

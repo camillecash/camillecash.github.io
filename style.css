@@ -128,6 +128,7 @@ section{
     font-weight: 500;
     max-width: 650px;
     margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 .social-icons a{
     display: inline-flex;
@@ -171,6 +172,17 @@ section{
     display: flex;
     align-items: center;
     gap: 10px;
+}
+.btn-secondary{
+    background: var(--main-color);
+    color: white;
+    border: 2px solid var(--main-color);
+}
+
+.btn-secondary:hover{
+    background: white;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
 }
 .text-animation{
     font-size: 34px;
@@ -388,10 +400,110 @@ section{
 }
 .accent-color{
     color: black !important;
-    font-weight: 700;
+    font-weight: 800;
     opacity: 1;
     margin-top: 1rem;
-    text-decoration: underline;
+}
+.details{
+    color: white;
+    opacity: 0.8;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    list-style: none;
+    padding: 0;
+}
+.details li{
+    display: flex;
+    align-items: flex-start;
+}
+.details li::before{
+    content: "‣";
+    font-weight: bold;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+.services h2{
+    margin-bottom: 6rem;
+}
+.services > p{
+    font-size: 2.3rem;
+    font-weight: 500;
+    max-width: 1000px;
+    margin: 0 auto 5rem;
+    text-align: center;
+}
+.service-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.service-container .services-box{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 3rem 2rem 4rem;
+    height: 500px;
+    border-radius: 2rem;
+    text-align: center;
+    border: 2.5rem solid var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.service-container .services-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    background-color: white;
+    color: black;
+}
+.services-box:hover i{
+    transform: scale(1.1);
+}
+.services-box i{
+    font-size: 7rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+    transition: 0.3 ease;
+}
+.services-box h3{
+    font-size: 3rem;
+}
+.service-description{
+    font-size: 1.7rem;
+    color: #667;
+    line-height: 1.6;
+    margin: 1.5rem 0 2rem;
+    max-width: 28rem;
+}
+.service-options{
+    font-size: 2rem;
+    margin: 1rem 0 3rem;
+    text-align: left;
+    list-style: none;
+}
+.service-options li{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.service-options li::before{
+    content: "✓";
+    color: var(--main-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+.services .btn{
+    display: block;
+    width: fit-content;
+    margin: 4rem auto 0;
+    padding: 1.5rem 4rem;
+    font-size: 2rem;
+    font-weight: 700;
 }
 .skills h2{
     margin-bottom: 8rem;
@@ -425,10 +537,16 @@ section{
     background-color: white;
     color: black;
 }
-.skills-box i{
+.skills-box:hover i,
+.skills-box:hover svg{
+    transform: scale(1.1);
+}
+.skills-box i,
+.skills-box svg{
     font-size: 7rem;
     margin-bottom: 2rem;
     color: var(--main-color);
+    transition: 0.3 ease;
 }
 .skills-box h3{
     font-size: 2.6rem;
@@ -452,6 +570,13 @@ section{
 }
 .contact{
     background-color: var(--second-bg-color);
+}
+.contact > p{
+    font-size: 2.3rem;
+    font-weight: 500;
+    max-width: 1000px;
+    margin: 0 auto 5rem;
+    text-align: center;
 }
 .contact h2{
     margin-bottom: 3rem;
@@ -481,6 +606,13 @@ section{
 }
 .contact form .btn{
     margin-top: 2rem;
+}
+.contact .btn{
+    padding: 1.5rem 4rem;
+    font-size: 2rem;
+}
+::placeholder{
+    color: #888;
 }
 .footer{
     position: relative;
@@ -565,6 +697,9 @@ section{
     #menu-icon{
         display: block;
     }
+    .heading{
+        font-size: 5rem;
+    }
     .navbar{
         position: absolute;
         top: 100%;
@@ -587,11 +722,11 @@ section{
         margin: 3rem 0;
     }
     .navbar a:hover{
-        color: black;
+        color: var(--main-color);
     }
     .home{
         flex-direction: column-reverse;
-        margin: 5rem 4rem;
+        margin: 5rem 0;
     }
     .home-circle-1{
         width: 45vw;
@@ -637,12 +772,18 @@ section{
     .about img{
         width: 70vw;
         margin-top: 1rem;
-        border: none;
         margin-bottom: 3rem;
         border: 25px solid var(--main-color);
     }
     .services h2{
         margin-bottom: 3rem;
+    }
+    .services > p{
+        font-size: 2rem;
+    }
+    .service-container .services-box{
+        height: auto;
+        min-height: 350px;
     }
     .timeline-items::before{
         left: 7px;
@@ -660,6 +801,9 @@ section{
     }
     .timeline-date-left{
         text-align: left;
+    }
+    .contact > p{
+        font-size: 2rem;
     }
 }
 
